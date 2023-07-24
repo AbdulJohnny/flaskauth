@@ -1,0 +1,17 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>User Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+    <a href="{{url_for('dashboard')}}"> Go Back To Dashboard </a><br>
+    <form method="post">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username }}
+        {{ form.email.label }} {{ form.email }}
+        {{ form.password.label }} {{ form.password }}
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+</html>

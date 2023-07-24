@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+    <a href="{{url_for('admin_dashboard')}}"> Go back to Dashboard </a><br>
+    <a href="{{url_for('view_users')}}"> Go Back To User List ? </a><br>
+    <form method="post">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username }}
+        {{ form.email.label }} {{ form.email }}
+        {{ form.password.label }} {{ form.password }}
+        {{ form.role.label }} {{ form.role }}
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+</html>
